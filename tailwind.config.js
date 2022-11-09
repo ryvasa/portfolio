@@ -9,6 +9,7 @@ module.exports = {
         abu: "#f0f0f0",
         atu: "#2e2e2e",
         amu: "#e5e7eb",
+        baru: "#1a1a1a",
       },
     },
   },

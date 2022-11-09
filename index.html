@@ -9,34 +9,38 @@
   </head>
   <body>
     <!-- navbar -->
-    <div id="navbar" class="navbar fixed top-0 left-0 z-10">
-      <div class="flex-1">
-        <a href="#home" class="btn btn-ghost lg:hover:bg-hijau bg-white dark:bg-hijau dark:text-amu shadow-xl text-hijau lg:hover:text-white normal-case text-xl">RyOS</a>
+    <div id="navbar" class="navbar max-h-11 fixed top-0 left-0 z-10 dark:bg-atu bg-white bg-opacity-40 dark:bg-opacity-40 drop-shadow-xl">
+      <div class="flex-1 p-9">
+        <label class="swap swap-rotate text-hijau">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" id="dark-toggle" />
+
+          <!-- sun icon -->
+          <div class="swap-off">
+            <svg class="fill-current w-9 h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- moon icon -->
+          <div class="swap-on">
+            <svg class="fill-current w-9 h-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+          </div>
+        </label>
       </div>
-      <label class="p-2 mr-6 hover:ring-hijau swap swap-rotate bg-white dark:bg-black dark:hover:text-hijau dark:text-amu shadow-xl text-hijau border-2-hijau rounded-full hover:bg-hijau hover:text-white">
-        <!-- this hidden checkbox controls the state -->
-        <input type="checkbox" id="dark-toggle" />
 
-        <!-- sun icon -->
-        <svg class="swap-on fill-current w-7 h-7 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path
-            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
-          />
-        </svg>
-
-        <!-- moon icon -->
-        <svg class="swap-off fill-current w-7 h-7 rounded-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path
-            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
-          />
-        </svg>
-      </label>
-      <div class="flex-none hidden lg:block bg-white shadow-xl rounded-full dark:bg-black dark:bg-opacity-50 dark:text-amu">
+      <div class="flex-none hidden lg:block dark:text-amu">
         <ul class="menu menu-horizontal p-0 px-11">
-          <li class="border-transparent border-b-4 hover:border-hijau"><a href="#home" class="bg-transparent font-medium text-shadow-xl">Home</a></li>
-          <li class="border-transparent border-b-4 hover:border-hijau"><a href="#about" class="bg-transparent font-medium text-shadow-xl">About</a></li>
-          <li class="border-transparent border-b-4 hover:border-hijau"><a href="#portfolio" class="bg-transparent font-medium text-shadow-xl">Portfolio</a></li>
-          <li class="border-transparent border-b-4 hover:border-hijau"><a href="#contact" class="bg-transparent font-medium text-shadow-xl">Contact</a></li>
+          <li class="border-transparent border-b-4 hover:border-hijau uppercase"><a href="#home" class="bg-transparent font-medium text-shadow-xl">Home</a></li>
+          <li class="border-transparent border-b-4 hover:border-hijau uppercase"><a href="#about" class="bg-transparent font-medium text-shadow-xl">About</a></li>
+          <li class="border-transparent border-b-4 hover:border-hijau uppercase"><a href="#portfolio" class="bg-transparent font-medium text-shadow-xl">Portfolio</a></li>
+          <li class="border-transparent border-b-4 hover:border-hijau uppercase"><a href="#contact" class="bg-transparent font-medium text-shadow-xl">Contact</a></li>
         </ul>
       </div>
 
@@ -64,7 +68,7 @@
     <!-- navbar end -->
 
     <!-- hero -->
-    <div id="home" class="hero min-h-screen dark:bg-black bg-white self-center">
+    <div id="home" class="hero min-h-screen dark:bg-atu bg-white self-center">
       <div class="hero-content text-end relative">
         <div class="relative">
           <h1 class="text-5xl font-bold dark:text-amu">Hello I'm <span class="text-hijau">RyanOS</span></h1>
@@ -73,7 +77,7 @@
       </div>
       <svg class="hidden dark:block absolute left-0 bottom-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#2e2e2e"
+          fill="#1a1a1a"
           fill-opacity="1"
           d="M0,128L48,160C96,192,192,256,288,234.7C384,213,480,107,576,101.3C672,96,768,192,864,240C960,288,1056,288,1152,250.7C1248,213,1344,139,1392,101.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -90,7 +94,7 @@
     <!-- hero end -->
 
     <!-- about -->
-    <div class="mx-auto dark:bg-atu dark:text-amu bg-abu" id="about">
+    <div class="mx-auto dark:bg-baru dark:text-amu bg-abu" id="about">
       <div class="text-center mb-8 w-36 mx-auto">
         <p class="pt-11 text-center uppercase font-bold text-2xl border-b-4 border-hijau">About</p>
       </div>
@@ -114,7 +118,7 @@
       </div>
       <svg class="pt-28 hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#000000"
+          fill="#2e2e2e"
           fill-opacity="1"
           d="M0,64L48,69.3C96,75,192,85,288,117.3C384,149,480,203,576,218.7C672,235,768,213,864,197.3C960,181,1056,171,1152,154.7C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -130,40 +134,40 @@
     <!-- About end -->
 
     <!-- portfolio -->
-    <div class="mx-auto dark:bg-black" id="portfolio">
+    <div class="mx-auto dark:bg-atu" id="portfolio">
       <div>
         <div class="text-center mb-8 w-36 mx-auto">
           <p class="text-center pt-11 uppercase font-bold text-2xl dark:text-white border-b-4 border-hijau">portfolio</p>
         </div>
-        <div class="card dark:text-white lg:card-side mt-28 w-9/12 mx-auto bg-white shadow-xl dark:bg-atu">
+        <div class="card text-white lg:card-side mt-28 w-9/12 mx-auto bg-hijau shadow-xl">
           <figure class="w-full lg:w-1/2 h-full"><img src="dist/img/2.jpg" alt="Album" /></figure>
           <div class="card-body">
             <h2 class="card-title">New album is released!</h2>
             <p>Click the button to listen on Spotiwhy app. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, suscipit.</p>
           </div>
         </div>
-        <div class="card dark:text-white lg:card-side mt-11 w-9/12 mx-auto bg-white shadow-xl dark:bg-atu">
+        <div class="card text-white lg:card-side mt-11 w-9/12 mx-auto bg-hijau shadow-xl">
           <figure class="w-full lg:w-1/2 h-full"><img src="dist/img/2.jpg" alt="Album" /></figure>
           <div class="card-body">
             <h2 class="card-title">New album is released!</h2>
             <p>Click the button to listen on Spotiwhy app. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, suscipit.</p>
           </div>
         </div>
-        <div class="card dark:text-white lg:card-side mt-11 w-9/12 mx-auto bg-white shadow-xl dark:bg-atu">
+        <div class="card text-white lg:card-side mt-11 w-9/12 mx-auto bg-hijau shadow-xl">
           <figure class="w-full lg:w-1/2 h-full"><img src="dist/img/2.jpg" alt="Album" /></figure>
           <div class="card-body">
             <h2 class="card-title">New album is released!</h2>
             <p>Click the button to listen on Spotiwhy app. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, suscipit.</p>
           </div>
         </div>
-        <div class="card dark:text-white lg:card-side mt-11 w-9/12 mx-auto bg-white shadow-xl dark:bg-atu">
+        <div class="card text-white lg:card-side mt-11 w-9/12 mx-auto bg-hijau shadow-xl">
           <figure class="w-full lg:w-1/2 h-full"><img src="dist/img/2.jpg" alt="Album" /></figure>
           <div class="card-body">
             <h2 class="card-title">New album is released!</h2>
             <p>Click the button to listen on Spotiwhy app. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, suscipit.</p>
           </div>
         </div>
-        <div class="card dark:text-white lg:card-side mt-11 w-9/12 mx-auto bg-white shadow-xl dark:bg-atu">
+        <div class="card text-white lg:card-side mt-11 w-9/12 mx-auto bg-hijau shadow-xl">
           <figure class="w-full lg:w-1/2 h-full"><img src="dist/img/2.jpg" alt="Album" /></figure>
           <div class="card-body">
             <h2 class="card-title">New album is released!</h2>
@@ -173,7 +177,7 @@
       </div>
       <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#2e2e2e"
+          fill="#1a1a1a"
           fill-opacity="1"
           d="M0,64L48,58.7C96,53,192,43,288,48C384,53,480,75,576,101.3C672,128,768,160,864,170.7C960,181,1056,171,1152,144C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -189,7 +193,7 @@
     <!-- portfolio end -->
 
     <!-- contact -->
-    <div id="contact" class="form-control w-full bg-abu dark:bg-atu dark:text-white">
+    <div id="contact" class="form-control w-full bg-abu dark:bg-baru dark:text-white">
       <div class="text-center mb-8 w-36 mx-auto pb-11">
         <p class="pt-11 uppercase font-bold text-2xl border-b-4 dark:text-white border-hijau">Contact</p>
       </div>
@@ -213,16 +217,9 @@
           <button class="btn bg-hijau text-white">Submit</button>
         </div>
       </div>
-      <svg class="hidden dark:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#000000"
-          fill-opacity="1"
-          d="M0,160L48,181.3C96,203,192,245,288,272C384,299,480,309,576,298.7C672,288,768,256,864,229.3C960,203,1056,181,1152,192C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-      <svg class="dark:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
+          fill="#166534"
           fill-opacity="1"
           d="M0,160L48,181.3C96,203,192,245,288,272C384,299,480,309,576,298.7C672,288,768,256,864,229.3C960,203,1056,181,1152,192C1248,203,1344,245,1392,266.7L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
@@ -231,7 +228,7 @@
     <!-- contact end -->
 
     <!-- footer -->
-    <footer class="footer footer-center p-10 dark:bg-black dark:text-white text-base-content">
+    <footer class="footer footer-center p-10 bg-hijau text-white">
       <div class="grid grid-flow-col gap-4">
         <a class="link link-hover uppercase" href="#home">home</a>
         <a class="link link-hover uppercase" href="#about">about</a>
